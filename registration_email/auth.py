@@ -6,6 +6,7 @@ Inspired by http://djangosnippets.org/snippets/2463/
 """
 from django.contrib.auth.backends import ModelBackend
 from django.contrib.auth.models import User
+import re
 
 email_re = re.compile(
     r"(^[-!#$%&'*+/=?^_`{}|~0-9A-Z]+(\.[-!#$%&'*+/=?^_`{}|~0-9A-Z]+)*"  # dot-atom
