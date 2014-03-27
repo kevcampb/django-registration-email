@@ -27,7 +27,13 @@ class EmailBackend(ModelBackend):
     supports_inactive_user = False
 
     def authenticate(self, username=None, password=None):
-        if email_re.search(username):
+        try:
+            validate_email(username)
+        except:
+            username_is_email = False
+        else:
+            username_is_email = True
+        if username_is_email:
             try:
                 user = User.objects.get(email=username)
             except User.DoesNotExist:

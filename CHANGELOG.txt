@@ -1,5 +1,19 @@
 === ongoing ===
 
+=== 0.7.1 ===
+
+- Added title block to all templates
+
+=== 0.7 ===
+
+- Added login_remember_me view function
+- Added remember_me field to EmailLoginForm
+
+=== 0.6 ===
+
+- Changed URL settings due to misuse of get_success_url function in
+  django-registration app
+- updated to support django-registration's new class based views
 
 === 0.5.4 ===
 

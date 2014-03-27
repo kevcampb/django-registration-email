@@ -2,6 +2,8 @@
 {% load url from future %}
 {% load i18n %}
 
+{% block title %}{% trans "Login" %}{% endblock %}
+
 {% block masthead %}
 <h2>{% trans "Login" %}</h2>
 {% endblock %}
@@ -19,6 +21,11 @@
         {{ form.password.errors }}
         {{ form.password.label_tag }}
         {{ form.password }}
+    </div>
+    <div class="fieldWrapper">
+        {{ form.remember_me.errors }}
+        {{ form.remember_me.label_tag }}
+        {{ form.remember_me }}
     </div>
     <div class="fieldWrapper">
         <a href="{% url "auth_password_reset" %}">{% trans "Forgot your password?" %}</a>
